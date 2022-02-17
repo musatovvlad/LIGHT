@@ -8,12 +8,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var lightOnOf = false // off
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        updateUi()
     }
-
-
+    
+    // toggle
+    fileprivate func updateUi() {
+        view.backgroundColor = lightOnOf ? .white : .black
+    }
+    
+    
+    @IBAction func buttonPressed() {
+        lightOnOf.toggle()
+        updateUi()
+    }
 }
+
 
