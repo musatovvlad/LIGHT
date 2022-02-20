@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+ 
 class ViewController: UIViewController {
     var lightOnOf = true // off
     override var prefersStatusBarHidden: Bool{
@@ -18,14 +18,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         updateUi()
     }
+  
     
-    // toggle
+    // MARK: methods
     fileprivate func updateUi() {
         view.backgroundColor = lightOnOf ? .white : .black
     }
     
-    
-    @IBAction func buttonPressed() {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         lightOnOf.toggle()
         updateUi()
     }
