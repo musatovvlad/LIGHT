@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         view.backgroundColor = lightOnOf ? .white : .black
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func  touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         lightOnOf.toggle()
         updateUi()
     }
